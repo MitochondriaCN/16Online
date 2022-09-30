@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "16Online (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "16Online (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
