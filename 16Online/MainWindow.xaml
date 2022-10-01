@@ -6,8 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <NavigationView x:Name="nvMainView" PaneDisplayMode="Left" Header="十六班 Online" IsBackButtonVisible="Collapsed"
+                    IsBackEnabled="False" PaneTitle="十六班 Online" ItemInvoked="nvMainView_ItemInvoked">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Home" Content="主页" Tag="Pages/Home"/>
+            <NavigationViewItem Icon="CalendarDay" Content="课程表" Tag="pgSchedule"/>
+            <NavigationViewItem Icon="Message" Content="通知" Tag="pgNotice"/>
+        </NavigationView.MenuItems>
+        <ScrollViewer Margin="58" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled">
+            <Frame x:Name="frmMainFrame"/>
+        </ScrollViewer>
+    </NavigationView>
 </Window>
